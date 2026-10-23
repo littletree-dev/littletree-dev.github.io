@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>skuggsjá</title>
+<style>
+  :root { --bg: #f4f3f0; --card: #fff; --ink: #1d1c1a; --sub: #6b6862; --line: #e3e0da; --accent: #2f5d62; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #141414; --card: #1d1d1f; --ink: #ecebe8; --sub: #a09d97; --line: #2c2c2e; --accent: #8cc4c9; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.65 system-ui, "Hiragino Sans", "Yu Gothic UI", sans-serif; }
+  header, main, footer { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+  header { padding-top: 36px; }
+  h1 { font-size: 24px; margin: 0; letter-spacing: .02em; }
+  header p { margin: 6px 0 0; color: var(--sub); font-size: 13.5px; }
+  main { display: grid; gap: 20px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); padding-top: 22px; padding-bottom: 12px; }
+  article { background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+  video { width: 100%; aspect-ratio: 16 / 10; display: block; background: #000; object-fit: cover; }
+  .b { padding: 12px 15px 15px; }
+  h2 { font-size: 16px; margin: 0 0 4px; }
+  .b p { margin: 0 0 6px; font-size: 13.5px; }
+  .src { color: var(--sub); font-size: 12.5px; }
+  .src a { color: var(--accent); }
+  .lic { font-size: 12px; color: var(--sub); border-top: 1px solid var(--line); margin-top: 8px; padding-top: 8px; }
+  footer { color: var(--sub); font-size: 12px; padding-top: 8px; padding-bottom: 40px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>skuggsjá</h1>
+  <p>見かけた UI を、勉強のために再現した物の動画です（ソースは置いていません）。すべて非公式の再現で、元の作者・会社とは関係ありません。skuggsjá は古ノルド語の「鏡」。</p>
+</header>
+<main>
+  <article>
+    <video src="v/sharks.mp4" poster="v/sharks.jpg" muted loop playsinline autoplay preload="metadata"></video>
+    <div class="b">
+      <h2>ASCII のサメが泳ぐ入力画面</h2>
+      <p>升目の文字で描いたサメ（シュモクザメ・トラフザメ・ネコザメ・ジンベイザメ・マンタ）が泳ぎ、中央に入力欄。泡とゴミの群れ。</p>
+      <p class="src">元：<a href="https://x.com/stackedlol/status/2112257760628986188">@stackedlol の投稿</a></p>
+      <p class="lic">形の素材：シュモクザメ＝Hugh M. Smith「Hammer-headed Shark, <i>Sphyrna zygaena</i>」FMIB 51331（<a href="https://commons.wikimedia.org/wiki/File:FMIB_51331_Hammer-Headed_Shark_Sphyrna_zygaena_Dorsal_and_dorso-lateral_views.jpeg">Wikimedia Commons</a>・Public domain）／トラフザメ＝Jean-Lou Justine「<a href="https://commons.wikimedia.org/wiki/File:Stegostoma_fasciatum_JNC1529_WB.png">Stegostoma fasciatum JNC1529 WB</a>」（<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>）から輪郭を取った。この動画は CC BY-SA 3.0 で公開します。ネコザメ・ジンベイザメ・マンタの形は比率から描いたもの。</p>
+    </div>
+  </article>
+  <article>
+    <video src="v/pixel-aquarium.mp4" poster="v/pixel-aquarium.jpg" muted loop playsinline autoplay preload="metadata"></video>
+    <div class="b">
+      <h2>ピクセルの水族館</h2>
+      <p>暗い水に、錦鯉の色の升の魚。水を押すと餌が落ちて寄ってくる。</p>
+      <p class="src">元：<a href="https://x.com/slashui/status/2113207655837929476">@slashui の投稿</a>（洛克船长）</p>
+      <p class="lic">魚の形と動きは上のサメと同じ仕組み（CC BY-SA 3.0 の素材を含む）。この動画は CC BY-SA 3.0 で公開します。</p>
+    </div>
+  </article>
+  <article>
+    <video src="v/fluid-blob.mp4" poster="v/fluid-blob.jpg" muted loop playsinline autoplay preload="metadata"></video>
+    <div class="b">
+      <h2>流体の塊</h2>
+      <p>粒の粗いグラデーションの塊が、流体のようにゆっくりうねる（WebGL）。</p>
+      <p class="src">元：<a href="https://x.com/bestdesignsonx/status/2112936962499695075">Best Designs On X の投稿</a>（Fluid Animation by @m_strba）</p>
+      <p class="lic">乱数は Dave Hoskins「Hash without Sine」の考え方を使った。</p>
+    </div>
+  </article>
+  <article>
+    <video src="v/gradient-cards.mp4" poster="v/gradient-cards.jpg" muted loop playsinline autoplay preload="metadata"></video>
+    <div class="b">
+      <h2>グラデーションのカード</h2>
+      <p>メッシュのグラデーションのカード3枚。重ねた radial-gradient の中心をゆっくり動かす（CSS）。</p>
+      <p class="src">元：<a href="https://x.com/kombaiselects/status/2113133247299457354">Kombai Selects の投稿</a>（Gradient cards by @basit_designs）</p>
+    </div>
+  </article>
+  <article>
+    <video src="v/liquid-logo.mp4" poster="v/liquid-logo.jpg" muted loop playsinline autoplay preload="metadata"></video>
+    <div class="b">
+      <h2>液面で揺れるロゴ</h2>
+      <p>ガラスのアイコンの底のマーク（♪）が、拍ごとの波紋の屈折で歪む（WebGL）。</p>
+      <p class="src">元：<a href="https://x.com/_crisjav/status/2113400415043924274">@_crisjav の投稿</a>（Apple Music の新しいロゴ演出の再現）／元の演出の説明：<a href="https://9to5mac.com/2026/10/21/apple-music-unveils-new-design-rebrand-with-logo-made-by-sound/">9to5Mac</a></p>
+      <p class="lic">Apple のロゴは使っていません。Apple・Apple Music とは関係ありません。</p>
+    </div>
+  </article>
+</main>
+<footer>動画は 10秒前後・音なし。各投稿の権利はそれぞれの作者にあります。</footer>
+</body>
+</html>
